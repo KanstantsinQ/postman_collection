@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "fe95a778-85c2-44d3-8537-78438b98a52d",
+		"name": "group_33_HW_1 Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/EP_1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kostik",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "34",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/get_method?name=str&age=int",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "str"
+						},
+						{
+							"key": "age",
+							"value": "int"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/EP_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kostik",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "34",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/user_info_3?name=Kostik&age=33&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"user_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kostik"
+						},
+						{
+							"key": "age",
+							"value": "33"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/EP_3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kostik",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "34",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_1?name=Kostik&age=34&weight=100",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kostik"
+						},
+						{
+							"key": "age",
+							"value": "34"
+						},
+						{
+							"key": "weight",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/EP_4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kostik",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "34",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_2?name=Kostik&age=34&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kostik"
+						},
+						{
+							"key": "age",
+							"value": "34"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/EP_5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"var req_url = pm.request.url.query.toObject();\r",
+							"console.log(\"req_url = \", req_url.name);\r",
+							"var req_url = pm.request.url.query.toObject();\r",
+							"console.log(\"req_url = \", req_url.age);\r",
+							"var req_url = pm.request.url.query.toObject();\r",
+							"console.log(\"req_url = \", req_url.salary);\r",
+							"\r",
+							"var resp_age = jsonData.age;\r",
+							"var req = request.data;\r",
+							"var req_age = req.age;\r",
+							"console.log(\"Resp_age = \" + resp_age);\r",
+							"console.log(\"Req_age = \" + req_age);\r",
+							"\r",
+							"var resp_name = jsonData.name;\r",
+							"var req = request.data;\r",
+							"var req_name = req.name;\r",
+							"console.log(\"Resp_name = \" + resp_name);\r",
+							"console.log(\"Req_name = \" + req_name);\r",
+							"\r",
+							"var resp_salary = jsonData.salary;\r",
+							"var req = request.data;\r",
+							"var req_salary = req.salary;\r",
+							"console.log(\"Resp_salary = \" + resp_salary);\r",
+							"console.log(\"Req_salary = \" + req_salary);\r",
+							"\r",
+							"var resp_family = jsonData.family;\r",
+							"var req = request.data;\r",
+							"console.log(\"Resp_family = \" , resp_family);\r",
+							"\r",
+							"var resp_name = jsonData.family.pets.dog.name;\r",
+							"var req = request.data;\r",
+							"console.log(\"Resp_name = \" , resp_name);\r",
+							"\r",
+							"var resp_age = jsonData.family.pets.dog.age;\r",
+							"var req = request.data;\r",
+							"console.log(\"Resp_age = \" , resp_age);\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Req_AGE_chek\", function () {\r",
+							"    pm.expect(req_age).to.eql(req_url.age);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Req_NAME_chek\", function () {\r",
+							"    pm.expect(req_name).to.eql(req_url.name);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Req_SALARY_chek\", function () {\r",
+							"    pm.expect(req_salary).to.eql(req_url.salary);\r",
+							"});\r",
+							"pm.test(\"Verify Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Dog_name_Luky\", function () {\r",
+							"    pm.expect(resp_name).to.eql(\"Luky\");\r",
+							"});\r",
+							"pm.test(\"Dog_age_Luky\", function () {\r",
+							"    pm.expect(resp_age).to.eql(4);\r",
+							"});\r",
+							"// pm.test(\"have_name\", () => {\r",
+							"//   pm.response.to.have.jsonBody.arguments(\"name\");\r",
+							"// });\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kostik",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "34",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/object_info_3?name=Kostik&age=34&salary=1000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kostik"
+						},
+						{
+							"key": "age",
+							"value": "34"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/EP_6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"var resp_age = jsonData.age;\r",
+							"var req = request.data;\r",
+							"var req_age = req.age;\r",
+							"console.log(\"Resp_age = \" + resp_age);\r",
+							"\r",
+							"var resp_name = jsonData.name;\r",
+							"var req = request.data;\r",
+							"var req_name = req.name;\r",
+							"console.log(\"Resp_name = \" , resp_name);\r",
+							"\r",
+							"// var req_raw_json = JSON.parse(pm.request.body.raw);\r",
+							"// console.log(\"req_raw_salary = \" , req_raw_json.salary);\r",
+							"// console.log(\"req_raw_name = \" , req_raw_json.name);\r",
+							"// console.log(\"req_raw_age = \" , req_raw_json.age);\r",
+							"\r",
+							"\r",
+							"var resp_salary_0 = jsonData.salary[0];\r",
+							"var req = request.data;\r",
+							"var req_salary_0 = req.salary_0;\r",
+							"console.log(\"Resp_salary_0 = \" + resp_salary_0);\r",
+							"\r",
+							"var resp_salary_1 = jsonData.salary[1];\r",
+							"var req = request.data;\r",
+							"var req_salary_1 = req.salary_1;\r",
+							"console.log(\"Resp_salary_1 = \" + resp_salary_1);\r",
+							"\r",
+							"var resp_salary_2 = jsonData.salary[2];\r",
+							"var req = request.data;\r",
+							"var req_salary_2 = req.salary_2;\r",
+							"console.log(\"Resp_salary_2 = \" + resp_salary_2);\r",
+							"\r",
+							"var req_raw_json = JSON.parse(pm.request.body.raw);\r",
+							"console.log(\"req_raw_salary = \" , req_raw_json.salary);\r",
+							"console.log(\"req_raw_name = \" , req_raw_json.name);\r",
+							"console.log(\"req_raw_age = \" , req_raw_json.age);\r",
+							"\r",
+							"pm.test(\"Req_Resp_AGE_chek\", function () {\r",
+							"    pm.expect(resp_age).to.eql(req_raw_json.age);\r",
+							"});\r",
+							"pm.test(\"Req_Resp_NAME_chek\", function () {\r",
+							"    pm.expect(resp_name).to.eql(req_raw_json.name);\r",
+							"});\r",
+							"pm.test(\"Req_Resp_Salary_0_chek\", function () {\r",
+							"    pm.expect(resp_salary_0).to.eql(req_raw_json.salary);\r",
+							"});\r",
+							"pm.test(\"Req_Resp_Salary_1_chek\", function () {\r",
+							"    pm.expect(resp_salary_1).to.eql(req_raw_json.salary*2);\r",
+							"});\r",
+							"pm.test(\"Req_Resp_Salary_2_chek\", function () {\r",
+							"    pm.expect(resp_salary_2).to.eql(req_raw_json.salary*3);\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Kostik\",\r\n    \"age\": 34,\r\n    \"salary\": 1000\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/object_info_4?name=Kostik&age=34&salary=1000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kostik"
+						},
+						{
+							"key": "age",
+							"value": "34"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/EP_7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kostik",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "34",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "2000",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user_info_2?name=Kostik&age=34&salaty=2000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kostik"
+						},
+						{
+							"key": "age",
+							"value": "34"
+						},
+						{
+							"key": "salaty",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
