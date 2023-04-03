@@ -1,3 +1,4 @@
+<a>
 <div align="center">
 <div id="header" align="center">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_rY3H6yyrrC7QWM-l-gYR5vw48gpNYMs--g&usqp=CAU" width="2000px"/>
@@ -28,12 +29,10 @@
 Postman доступен в виде приложения для Windows, Linux и macOS, а также в web-интерфейсе (для его работы нужно установить программу Postman Desktop Agent).
 
 Вот как выглядит работа с коллекциями запросов:
- 
-<div>
+
 <div id="header" align="center">
 <img src=https://blog.skillfactory.ru/wp-content/uploads/2023/02/image1-5-2.png" width="2500px"/>
-</div>
-
+                                                                                                                                                                      
 + Коллекция запросов для теста API. Внутри коллекции запросы можно объединять в папки.
 + Вкладка запроса из коллекции.
 + Выбор метода для запроса (GET, POST, PUT, DELETE).
@@ -53,7 +52,7 @@ Postman доступен в виде приложения для Windows, Linux 
 
 ---
 
-###Методы Postman
+### Методы Postman
 
 Чаще всего в работе API используется архитектура RESTful. В этой архитектуре есть четыре стандартных метода запросов к серверам по HTTP:
 
