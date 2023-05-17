@@ -30,7 +30,7 @@ Postman доступен в виде приложения для Windows, Linux 
 Вот как выглядит работа с коллекциями запросов:
 
 
-<img src=https://blog.skillfactory.ru/wp-content/uploads/2023/02/image1-5-2.png" width="2500px"/>
+<img src="https://blog.skillfactory.ru/wp-content/uploads/2023/02/image1-5-2.png" width="2500px"/>
                                                                                                                                                                                      
                                                                                                             
 + Коллекция запросов для теста API. Внутри коллекции запросы можно объединять в папки.
