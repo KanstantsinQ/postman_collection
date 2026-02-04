@@ -1,8 +1,7 @@
 ﻿Postman.
 HW_1
 
-
-Создать запросы в Postman.
+Utworzyć zapytania w Postmanie.
 
 
 Protocol: http
